@@ -4,7 +4,7 @@ require "rails_helper"
 describe "user sees one articles" do
   describe "they link from the articles index" do
     it "displays information for one article" do
-      article_1.create!(title: "Awesome article", body: "This article is awesome")
+      article_1 = Article.create!(title: "Awesome article", body: "This article is awesome")
 
       visit '/articles'
 

@@ -1,5 +1,14 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    render locals: {
+              articles:  Article.all
+              }
+  end
+
+  def show
+    require "pry"; binding.pry
+    render locals: {
+              article:  Article.find(params[:id])
+              }
   end
 end
