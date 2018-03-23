@@ -14,7 +14,6 @@ describe "user edits an article" do
       fill_in "article[body]", with: "New Article Body"
       click_on "Update Article"
 
-      expect(current_path).to eq(articles_path)
       expect(page).to have_content("New Article Title")
       expect(page).to have_content("New Article Body")
     end
