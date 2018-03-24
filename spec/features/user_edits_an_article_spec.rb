@@ -16,7 +16,11 @@ describe "user edits an article" do
 
       expect(page).to have_content("New Article Title")
       expect(page).to have_content("New Article Body")
+<<<<<<< HEAD
       expect(page).to have_content("Article 'New Article Title' was Updated!")
+=======
+      expect(page).to have_content("Article 'New Article Title' was updated!")
+>>>>>>> f814f0492f6d4d7764277195a46865f4545e7758
     end
   end
 end
