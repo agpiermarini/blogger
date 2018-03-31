@@ -56,7 +56,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   Shoulda::Matchers.configure do | config |
-    config.ntegrate do | with |
+    config.integrate do | with |
       # Choose a test framework;
       with.test_framework :rspec
       # Or, choose the following (which implies all of the above):
