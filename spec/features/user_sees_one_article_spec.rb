@@ -36,4 +36,17 @@ describe "they fill in a comment form" do
     expect(page).to have_content("ME!")
     expect(page).to have_content("So many thoughts on this article.")
   end
-end  
+end
+
+describe 'they clink a tag' do
+  it 'brings them to the tag show page' do
+    article = Article.create!(title: "New Title", body: "New Body")
+    tag = Tag.create!(name: "Name")
+    tagging = Tagging.create!(article_id: article.id, tag_id: tag.id)
+
+    visit article_path(article)
+
+    click_link tag.name
+    expect(current_path).to eq(tag_path(tag))
+  end
+end
